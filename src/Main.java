@@ -17,6 +17,13 @@ public class Main {
         return sc.nextLine();
     }
 
+    public static int heroAttack() {
+        return (int) Math.floor(Math.random() * (20 - 10)) + 10;
+    }
+
+    public static int enemyAttack() {
+        return (int) Math.floor(Math.random() * (10 - 5)) + 5;
+    }
 
     public static void main(String[] args) {
 
@@ -26,7 +33,9 @@ public class Main {
         // If user opts to start game, get user's name
         if(runGame) {
             String userName = getUserName();
-            System.out.println(userName);
+            System.out.printf("Hello, %s!  Welcome to game.  Defeat as many enemies as you can!", userName);
+            int heroHealth = 100;
+            int enemyHealth = 100;
 
         }
 
